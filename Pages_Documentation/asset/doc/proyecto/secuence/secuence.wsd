@@ -1,0 +1,20 @@
+@startuml
+title EasyCar Rent – Sequence Diagram (Create Reservation)
+
+actor Customer
+participant "Security\n(Customer)" as Cust
+participant "Fleet Management\n(Vehicle)" as Vehicle
+participant "Reservation Management\n(Reservation)" as Reservation
+
+Customer -> Cust : Provide personal data
+Cust --> Customer : Validate identity
+
+Customer -> Vehicle : Search available cars
+Vehicle --> Customer : Return available cars
+
+Customer -> Reservation : Request reservation
+Reservation -> Vehicle : Verify availability
+Vehicle --> Reservation : Availability confirmed
+Reservation --> Customer : Reservation created
+
+@enduml
