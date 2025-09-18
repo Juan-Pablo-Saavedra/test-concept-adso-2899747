@@ -1,0 +1,23 @@
+@startuml
+title EasyCar Rent – Package Diagram
+
+package "Customer Management" {
+  class customer
+  class driving_license
+  class customer_history
+}
+
+package "Fleet Management" {
+  class vehicle
+  class vehicle_category
+  class vehicle_status
+}
+
+package "Reservation Management" {
+  class reservation
+  class reservation_status
+  class branch
+  class reservation_type
+}
+
+@enduml
